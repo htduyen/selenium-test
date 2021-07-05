@@ -19,3 +19,16 @@
     print(main.text)
 
     find_elements_by_tag_name("article")  ==> element(s)
+
+# Chapter 2: Navigation and Clicking
+
+    link = driver.find_element_by_link_text("Python Programming")
+    link.click()
+
+    driver.back()
+    driver.forward()
+
+    link_text = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "sow-button-19310003"))
+    )
+    link_text.click()
